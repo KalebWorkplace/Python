@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Aug 27 10:52:53 2021
+
+@author: PC KL
+"""
+
+day = "Thursday"
+print(type(day))
+day = 32.5
+print(type(day))
+day = 19
+print(type(day))
+day = 3j
+print(type(day))
+
+expenses1 = input("How much did you spend on Sunday?")
+expenses2 = input("How much did you spend on Monday?")
+#total$ is a bad variable because of the $
+#2total is a bad variable because it doesn't begin with a letter
+#total spent is a bad variable because of the space
+total = float(expenses1) + float(expenses2) 
+
+print("You spend: $" + "{:.2f}".format(total))
+
+#Casting
+x = int(1)
+y = int(2.8)
+z = int("3")
+print(x, end =" ")
+print(y, end = " ")
+print(z, end = " ")
+
+
+x = float(1)
+y = float(2.8)
+z = float("3")
+w = float("4.2")
+print(x, end =" ")
+print(y, end = " ")
+print(z, end = " ")
+print(w)
+
+x = str("s1")
+y = str(2)
+z = str(3.0)
+print(x)
+print(y)
+print(z)
+
+x = complex(5)
+print(x)
+
+#Take a radius as an input. Print out the area of that circle
+#Take a radius as an input. Print out the volume of sphere.
+#Both answers should be to the 4 decimal places printed
+
+aradius = input("What is the radius of your circle?")
+area = float(aradius) * float(aradius) * float(3.1415)
+print("The area of your circle is " + "{:.4f}".format(area))
+
+sradius = input("What is the radius of your sphere?")
+area = float(sradius) * float(sradius) * float(sradius) * float(4 / 3) * float(3.1415)
+print("The volome of your sphere is " + "{:.4f}".format(area))

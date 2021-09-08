@@ -1,0 +1,37 @@
+@author: PC KL
+"""
+#Boolean Keywords
+print(type(True))
+print(type(False))
+print(type('True'))
+
+David = 4.0
+Elijah = 3.5
+Cesar = 3.5
+Gabin = 1.5
+
+print("Who is better? Is David better than Elijah? ")
+print(David > Elijah)
+
+print("Are Elijah and Cesar of equal caliber?")
+print(Elijah == Cesar)
+
+print("Is Cesar in between the worst and best students")
+print(Cesar > Gabin and Cesar < David)
+
+#Scholarship, University Calculator
+y1 = float(input("What was your freshman year GPA? "))
+y2 = float(input("What was your sophomore year GPA? "))
+y3 = float(input("What was your junior year GPA? "))
+musician =input("Are you a talented musician ")
+gpa = (y1 + y2 + y3) / 3
+print("Your GPA is {:.2f}".format(gpa))
+
+if(gpa > 3.7):
+ print("You are qualified for earning a scholarship")
+ 
+elif(gpa > 3.4 and (musician == "yes" or musician == "Yes" or musician == "YES")):
+ print("You are qualified for earning a scholarship")
+ 
+else:
+    print("You better save up for school")

@@ -1,0 +1,60 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 27 10:45:11 2021
+
+@author: PC KL
+"""
+
+def taxes(price):
+    tax_money = price * 1.08
+    print("The total is: $" + str(tax_money))
+    
+price = float(input("What is the price of your item: $"))
+taxes(price)
+
+print(" ")
+print("-----------------------------------------------------------------------")
+
+def tip(tip_percent):
+    should_tip = food_price * tip_percent
+    print("You should tip $" + str(should_tip))
+
+food_price = float(input("What was the price of your food? $"))
+
+while True: 
+    quality = str(input("What was the quality of the food? "))
+    if quality == "Good" or quality == "good":
+        percent = 0.20
+        break
+    elif quality == "fair" or quality == "Fair":
+        percent = 0.15
+        break
+    elif quality == "Bad" or quality == "bad":
+        percent = 0.10
+        break
+    else:
+        print("sorry, you must say if it was good, fair, or bad. ")
+
+tip(percent)
+
+print(" ")
+print("-----------------------------------------------------------------------")
+
+def eaten_slice(pizza, people):
+    eaten = pizza // people
+    leftover = pizza % people
+    print("Each person recieves " + str(eaten) + " slice(s) and there will be " + str(leftover) + " slice(s) left")
+
+pizza = int(input("How many total slices are there? "))
+people = int(input("How many total people are there? "))
+
+eaten_slice(pizza, people)
+
+print(" ")
+print("-----------------------------------------------------------------------")
+print(" ")
+
+def goodbye():
+    print("Thank you for you participation! See you soon!")
+    
+goodbye()

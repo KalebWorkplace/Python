@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 19 11:01:28 2021
+
+@author: PC KL
+"""
+
+#When we return multiple values in a function - we usually have a tuple
+PI = 3.14159
+
+def circleInfo(radius, color):
+    diameter = 2 * radius
+    circumference = 2 * radius * PI
+    area = PI * radius**2
+    color = color
+    return (diameter, circumference, area, color)
+
+c1 = circleInfo(3, "red")
+print(c1)
+
+c2 = circleInfo(6, "blue")
+c2_d, c2_c, c2_a, c2_col = c2
+print("Circle 2's area:", c2_a)
+
+letter_tuple = ('g', 'a', 'b', 'l', 'e', 's')
+print(letter_tuple[2:])
+print(letter_tuple[-2])
+
+#Cannot change elements of a tuple
+#letter_tuple [0]= 'G'
+#To make a change - need to covert to list and back
+letter_list = list(letter_tuple)
+letter_list[0] = 'G'
+letter_tuple = tuple(letter_list)
+print(letter_tuple)
+#To create a tuple: Use circular, rounded parentheses
+word_tuple = ("One Element",)
+print(type(word_tuple))
+
+words_tuple = ("New York", "Jersey", "New Jersey", "Miami", "Jersey", "Jersey", "Binghamtpon")
+for location in words_tuple:
+    print(location, end = " ")
+    print(words_tuple.count(location))

@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 25 11:03:13 2021
+
+@author: PC KL
+"""
+
+students = ["George", "Adrian", "Amanda", "Jennifer"]
+grades = [2.7, 3.1, 2.2, 3.6]
+
+new_student = True
+while(new_student != "no"):
+    new_student = input("Another student? ")
+    if(new_student != "no"):
+        students.append(new_student)
+        new_grade = float(input("Their grade: "))
+        grades.append(new_grade)
+
+p1_names = enumerate(students)
+p1_grades = enumerate(grades)
+
+
+print("Type", type(p1_names))
+print("Type", type(p1_grades))
+
+for n in p1_names: 
+    print(n)
+    
+for g in p1_grades: 
+    print(g)
+
+# Iterate through two lists simultaneously
+for (n, g) in zip(students, grades):
+    print(n + " earned: " + str(g))
+
+#print(list(p1_names))
+#print(list(p1_grades))

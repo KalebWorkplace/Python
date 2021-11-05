@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov  5 11:03:49 2021
+
+@author: PC KL
+"""
+
+import os
+from os import listdir
+from os.path import isfile, join
+
+print(os.getcwd())
+os.chdir("C:\\Users\\PC KL\\Desktop\\Reviews")
+applicants = ["Reub", "David", "Gio", "Alvarez", "Amanda"]
+rating = [False, False, True, False, True]
+
+for index in range(len(applicants)):
+    f = open(applicants[index] + ".txt", "w")
+    opening = "Dear {}".format(applicants[index])
+    f.write(opening)
+    if(rating[index]):
+        f.write("\n\nCongratulations. You are exactly what we are looking for. We are excited to have you in our organization.")
+    else:
+        f.write("\n\nThank you for applying. However you are not what we are looking for. Feel free to apply again next year.")
+    f.close()
+    
+print

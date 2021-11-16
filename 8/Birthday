@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov 12 11:02:37 2021
+
+@author: PC KL
+"""
+
+from datetime import datetime
+from datetime import date
+"""
+print("We are starting at: ")
+currently = datetime.now()
+print(currently)
+currently = date.today()
+print(currently)
+
+try:
+    bday = input("Give your birthday: ")
+    date_object = datetime.strptime(bday, "%B %d, %Y")
+    print("Day of week: " + date_object.strftime("%A"))  
+    now = datetime.today()
+    difference = now - date_object
+    print("That was this many days ago: ", difference.days)
+    dday = input("Give your death day: ")
+    death_object = datetime.strptime(bday, "%B %d, %Y")
+    tilDeath = death_object - now
+    print("You have this many days left: ", tilDeath.days)
+    print("This will be on a "+ death_object.strftime("%A"))
+except:
+    print("Use format: Month date, year")
+"""
+
+dictionary_bd = {}
+david_bd = datetime(2005, 12, 9)
+gionna_bd = datetime(2006, 9, 12)
+reuben_bd  = datetime(2004, 1, 23)
+amanda_bd = datetime(2007, 11, 20)
+cesar_bd = datetime(2004, 2, 5)
+
+dictionary_bd["Ake"] = david_bd
+dictionary_bd["Smith"] = gionna_bd
+dictionary_bd["Alvarez"] = reuben_bd
+dictionary_bd["Doe"] = amanda_bd
+dictionary_bd["Ramirez"] = cesar_bd
+
+print(dictionary_bd["Smith"])
+print("Ramirez" in dictionary_bd)
+for k in dictionary_bd:
+    print("Key: " + str(k))
+    print("Date: "+ str(dictionary_bd[k]))

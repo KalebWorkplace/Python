@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec 13 11:16:08 2021
+
+@author: PC KL
+"""
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+path_to_data = "C:\\Users\\PC KL\\Desktop\\Stocks\\data.csv"
+df = pd.read_csv(path_to_data)
+
+val = input("Maximum or minimum: ")
+val = val.lower()
+
+stat = input("Price, Delta, Gamma: ")
+stat = stat.lower()
+
+if(val == "minimum"):
+   if(stat == "gamma"):
+       print("Date: ", end="")
+       print(df[df.gex == df.gex.min()])
+       print("Minimum: " + str(min(df['gex'])))
+   elif(stat == "price"):
+       print("Date: ", end="")
+       print(df[df.price == df.price.min()])
+       print("Minimum: " + str(min(df['gex'])))
+
+elif(val == "maximum"):
+    if(stat == "gamma"):
+        print("Date: ", end="")
+        print(df[df.gex == df.gex.max()])
+        print("Minimum: " + str(max(df['gex'])))
+    elif(stat == "price"):
+       print("Date: ", end="")
+       print(df[df.price == df.price.min()])
+       print("Minimum: " + str(min(df['gex'])))
